@@ -1,0 +1,12 @@
+
+<h1><center>The Late Show With Stephen Colbert</center></h1>
+<% if session[:username] %>
+<center>
+  <%= link_to 'View Guests', guests_path  %><br>
+  <%= link_to 'View Episodes', episodes_path  %><br>
+  <%= link_to 'Add Appearances', new_appearance_path  %><br>
+  <%= link_to 'Logout', logout_path, method: 'post' %>
+  </center>
+<% else %>
+<p><%= link_to 'Login', login_path %></p>
+<% end %>
